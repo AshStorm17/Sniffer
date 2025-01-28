@@ -1,0 +1,5 @@
+Seq Number: 1376971233
+Ack Number: 1135829392
+Checksum: 0xe670
+Source IP: 10.240.8.31
+Destination IP: 10.7.11.235
