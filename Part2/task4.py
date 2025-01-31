@@ -1,7 +1,11 @@
 import pyshark
+import os
+
+pcap_filename = "7.pcap"
+pcap_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", pcap_filename)
 
 # Open the pcap file
-capture = pyshark.FileCapture('7.pcap')
+capture = pyshark.FileCapture(pcap_path)
 task_file = "task4_packets.txt"
 
 # Task 4: Find the TCP packet where the sum of raw Sequence and Acknowledgement numbers is 2512800625 and checksum ends with 70
@@ -17,3 +21,4 @@ with open(task_file, "w") as f:
                 f.write(f"Seq Number: {seq_num}\nAck Number: {ack_num}\nChecksum: {checksum}\nSource IP: {packet.ip.src}\nDestination IP: {packet.ip.dst}")
                 print(packet)
                 break
+            

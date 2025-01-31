@@ -1,7 +1,11 @@
 import pyshark
+import os
+
+pcap_filename = "7.pcap"
+pcap_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", pcap_filename)
 
 # Open the pcap file
-capture = pyshark.FileCapture('7.pcap')
+capture = pyshark.FileCapture(pcap_path)
 task_file = "task1_packets.txt"
 
 # Task 1: Find the IP addresses of source and destination for a TCP packet with ACK and PSH flags set and sum of source and destination ports = 60303
@@ -20,5 +24,5 @@ with open(task_file, "w") as f:
             if (flags & 0x10) and (flags & 0x08) and (src_port + dst_port == 60303):
                 f.write(f"Source IP: {packet.ip.src}, Destination IP: {packet.ip.dst}")
 
-print(count)
+f"Total TCP packets satisfying all conditions in Task 1: {count}"
                 

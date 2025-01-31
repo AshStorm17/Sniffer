@@ -1,8 +1,12 @@
 import pyshark
 from sympy import isprime
+import os
+
+pcap_filename = "7.pcap"
+pcap_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", pcap_filename)
 
 # Open the pcap file
-capture = pyshark.FileCapture('7.pcap')
+capture = pyshark.FileCapture(pcap_path)
 task_file = "task3_packets.txt"
 
 # Task 3: Find the number of TCP packets satisfying specific IP and port conditions
