@@ -1,0 +1,12 @@
+Capture Summary:
+Total Packets Captured: 0
+Total Data Transferred: 0 bytes
+Min Packet Size: 0 bytes
+Max Packet Size: 0 bytes
+Average Packet Size: 0.00 bytes
+
+Unique Source-Destination Pairs:
+
+Flows per Source IP:
+
+Flows per Destination IP:
