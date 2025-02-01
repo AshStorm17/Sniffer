@@ -21,3 +21,6 @@ Simultaneously run
 sudo tcpreplay -i eth0 --pps=1000 7.pcap
 ```
 The pps argument is optional but recommended.
+
+## Note:
+The 7.pcap file need to be added to the root folder after cloning.
